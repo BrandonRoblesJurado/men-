@@ -24,7 +24,7 @@ class Calculadora:
 
 class CalEstandar(Calculadora):
     def __ini__(self, numero1, numero2):
-            super()._init_(numero1,numero2)
+            super().__init__(numero1,numero2)
 
 
     def mutiplicacion(self): # aplicar polimorfismo
@@ -44,7 +44,7 @@ class CalEstandar(Calculadora):
 class CalCientifica(Calculadora):
     PI = 3.1416 
     def __init__(self, numero1, numero2):
-            super()._init_(numero1,numero2)
+            super().__init__(numero1,numero2)
     
     
     def  circunferencia(radio):
