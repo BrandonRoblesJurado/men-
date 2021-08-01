@@ -16,8 +16,8 @@ class Calculadora:
         print("La multiplicación de los numeros {} y {} es de: {}".format(self.num1,self.num2,total_Mul))
                 
     def division(self):
-        total_Div=self.num1 / self.num2
-        print("La division de los numeros es de: {}".format(total_Div))
+        total_Div= self.num1 / self.num2
+        print("La division de los 2 numeros es de: {}".format(total_Div))
         
 class CalEstandar(Calculadora):
     def __init__(self, numero1, numero2):
@@ -25,20 +25,22 @@ class CalEstandar(Calculadora):
         
         
     def multiplicacion(self):
-        Resultado= self.num1 * self.num2
-        return Resultado
+        return  self.num1 * self.num2
+        
     
     def exponente(self):
         total_Exp = self.num1**self.num2
-        print("la respuesta es: ",total_Exp)
+        print("la multiplicacion de {}**{} de la potencia es: {}".format(self.num1,self.num2,total_Exp))
 
-    def valorAbsoluto(sefl,numero3):
-        if numero3 < 0:
-            numero3 = numero3 *- 1
-        return numero3
+    def valorAbsoluto(self):
+        numero= self.num1+self.num2
+        if numero < 0:
+            numero = numero *- 1
+        return numero
 
     
-class calCientifica(Calculadora):                    
+class calCientifica(Calculadora):
+
     def __init__(self, numero1, numero2):
         super().__init__(numero1, numero2)
         
@@ -53,4 +55,4 @@ class calCientifica(Calculadora):
         return area
     
     def areaCuadrado(self):
-        return self.num2 ** 2
+        return self.num1 ** 2
