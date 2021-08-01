@@ -38,8 +38,7 @@ class CalEstandar(Calculadora):
         return numero3
 
     
-class calCientifica(Calculadora):
-                        #radio  #lado
+class calCientifica(Calculadora):                    
     def __init__(self, numero1, numero2):
         super().__init__(numero1, numero2)
         
