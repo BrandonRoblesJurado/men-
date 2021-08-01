@@ -1,5 +1,5 @@
 import os
-from calculadora import CalEstandar,CalCientifica,Calculadora
+from calculadora import CalEstandar,calCientifica,Calculadora
 
 class Menu:
     def __init__(self,titulo,opciones=[]):
@@ -37,8 +37,8 @@ while opc!="5":
                 n1=int(input("ingrese un numero: "))
                 n2=int(input("ingrese un numero: "))
                 cal = CalEstandar(n1,n2)
-                print("la suma de los 2 numero es:", cal.suma())
-                input("Presionne una tecla para continuar....")
+                cal.suma()
+                input("Presione una tecla para continuar....")
                     
 
 
@@ -49,8 +49,8 @@ while opc!="5":
                 n1=int(input("ingrese un numero: "))
                 n2=int(input("ingrese un numero: "))
                 cal = CalEstandar(n1,n2)
-                print("la resta de los 2 numero es:",cal.resta())
-                input("Presionne una tecla para continuar....")
+                cal.resta()
+                input("Presione una tecla para continuar....")
                 
 
 
@@ -61,8 +61,8 @@ while opc!="5":
                 n1=int(input("ingrese un numero: "))
                 n2=int(input("ingrese un numero: "))
                 cal = CalEstandar(n1,n2)
-                print("la multiplicacion de los 2 numero es:","{}*{}={}".format(n1,n2,cal.mutiplicacion()))
-                input("Presionne una tecla para continuar....")
+                print("la multiplicacion de los 2 numero es:","{}*{}={}".format(n1,n2,cal.multiplicacion()))
+                input("Presione una tecla para continuar....")
                 
 
 
@@ -74,9 +74,9 @@ while opc!="5":
                 n1=int(input("ingrese un numero: "))
                 n2=int(input("ingrese un numero: "))
                 cal = CalEstandar(n1,n2)
-                print("la division es de: ", "{}/{}={}".format(n1,n2,cal.división()))
+                cal.division()
 
-                input("Presionne una tecla para continuar....")
+                input("Presione una tecla para continuar....")
                 
         
 
@@ -85,9 +85,11 @@ while opc!="5":
                 print("Calculadora Exponente")
                 print(" ") 
 
-
-                print("la suma de los 2 numero es:",n1+n2)
-                input("Presionne una tecla para continuar....")
+                n1=int(input("ingrese un numero: "))
+                n2=int(input("ingrese un numero: "))
+                cal = CalEstandar(n1,n2)
+                cal.exponente()
+                input("Presione una tecla para continuar....")
                 
 
 
@@ -95,8 +97,12 @@ while opc!="5":
                 print("Calculadora Valor Absoluto")
                 print(" ")
 
-                print("la suma de los 2 numero es:",n1+n2)
-                input("Presionne una tecla para continuar....")
+                n1=int(input("ingrese un numero: "))
+                n2=0
+                cal =CalEstandar(n1,n2)
+                print("El valor absoluto es: ",cal.valorAbsoluto())
+                
+                input("Presione una tecla para continuar....")
                 
 
 
@@ -105,8 +111,11 @@ while opc!="5":
                 print("Calculadora Circunferencia")
                 print(" ") 
 
-                print("la suma de los 2 numero es:",n1+n2)
-                input("Presionne una tecla para continuar....")
+                n1 = int(input("Ingrese el valor del radio del circulo: "))
+                n2=0
+                cal = calCientifica(n1,n2)
+                print("Valor de la superficie del radio es : ", cal.circunferencia())
+                input("Presione una tecla para continuar....")
                 
 
 
@@ -114,8 +123,10 @@ while opc!="5":
             elif opc1 == "8": 
                 print("Calculadora Area Circulo")
                 print(" ")
-
-                print("la suma de los 2 numero es:",n1+n2)
+                n1=int(input("Ingrese el area: "))
+                n2=0
+                cal= calCientifica(n1,n2)
+                print("Valor del Area Circulo es:",cal.areaCirculo())
                 input("Presionne una tecla para continuar....")
                 
 
@@ -124,8 +135,11 @@ while opc!="5":
             elif opc1 == "9": 
                 print("Calculadora Area Cuadrado")
                 print(" ")
+                n1= int(input("Ingrese el area: "))
+                n2=0
+                cal= calCientifica(n1,n2)
 
-                print("la suma de los 2 numero es:",n1+n2)
+                print("Valor del Area Cuadrado es:",cal.areaCuadrado())
                 input("Presionne una tecla para continuar....")
                 
 
